@@ -16,7 +16,7 @@ class CashRegister
 
   def apply_discount
     if @discount != 0
-      discount_percent = @discount/100.round(2)
+      discount_percent = @discount/100.round
       @total -= @total*discount_percent
       after_discount = @total.round
       "After the discount, the total comes to $#{after_discount}."
