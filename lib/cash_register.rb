@@ -12,4 +12,16 @@ class CashRegister
     quantity.times {@items << title}
     @last_item_price = price
   end
+
+
+  def apply_discount
+    if @discount > 0
+      discount_percent = @discount/100.round(2)
+      @total -= @total*discount_percent
+      after_discount = @total.round
+      "After the discount, the total comes to $#{after_discount}."
+    else
+      "There is no discount to apply."
+    end
+  end
 end
