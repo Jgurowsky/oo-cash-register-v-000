@@ -1,3 +1,5 @@
+require 'pry'
+
 class CashRegister
   attr_accessor :total, :discount, :items, :last_item_price
 
@@ -23,6 +25,7 @@ class CashRegister
     else
       "There is no discount to apply."
     end
+    binding.pry
   end
 
   def void_last_transaction
